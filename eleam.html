@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>StimKine ELEAM | Kinesiología individualizada para residencias de adultos mayores</title>
+  <meta name="description" content="Servicio kinésico para ELEAM: terapia individualizada por residente, ficha clínica y evolución en EvalKine con acceso para la familia, estadísticas y registro de la atención." />
+  <meta name="keywords" content="kinesiología a domicilio Santiago, kinesiología adultos mayores domicilio, kinesiólogo domicilio Santiago sur, prevención de caídas adulto mayor, kinesiología ELEAM, kinesiología para ELEAM Santiago, kinesiología postoperatoria rodilla cadera, rehabilitación cardiometabólica domicilio, San Ramón La Cisterna El Bosque San Miguel, rehabilitación musculoesquelética" />
+  <meta name="author" content="StimKine - Guillermo Díaz Viveros" />
+  <meta name="theme-color" content="#2A7DE1" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://stimkine.github.io/eleam.html" />
+
+  <meta property="og:title" content="StimKine ELEAM | Kinesiología individualizada para residencias de adultos mayores" />
+  <meta property="og:description" content="Servicio kinésico para ELEAM: terapia individualizada por residente, ficha clínica y evolución en EvalKine con acceso para la familia, estadísticas y registro de la atención." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stimkine.github.io/eleam.html" />
+  <meta property="og:image" content="assets/logo_stimkine.jpg" />
+  <meta property="og:locale" content="es_CL" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+
+    /* ── ELEAM / VALORES ── */
+    .eleam-section {
+      background: linear-gradient(135deg, rgba(42,125,225,.07), rgba(62,207,142,.10));
+    }
+    /* ── QUIÉN TE ATIENDE ── */
+    .doc-card { display:flex; gap:24px; align-items:center; background:#fff; border-radius:24px; padding:22px; box-shadow:var(--shadow-soft); max-width:760px; margin:0 auto 18px; }
+    .doc-photo { width:150px; height:150px; border-radius:50%; object-fit:cover; object-position:center 10%; flex-shrink:0; }
+    .doc-info h3 { margin:6px 0 2px; font-size:1.25rem; }
+    .doc-info .team-title { margin:0 0 8px; }
+    .doc-text { color:var(--muted); font-size:.95rem; margin:0 0 10px; }
+    .doc-cert { max-width:760px; margin:0 auto; background:rgba(62,207,142,.12); border-radius:20px; padding:18px 22px; }
+    .doc-cert strong { display:block; margin-bottom:6px; }
+    .doc-cert p { margin:0; color:var(--muted); font-size:.95rem; }
+    @media (max-width:600px){ .doc-card{ flex-direction:column; text-align:center; } .doc-photo{ width:130px; height:130px; } }
+
+    /* ── PROMO ELEAM ── */
+    .promo-bar {
+      background: linear-gradient(90deg, #1a6fd4 0%, #0ea86e 100%);
+      color: #fff;
+      text-align: center;
+      padding: 12px 20px;
+      font-size: .97rem;
+      font-weight: 600;
+    }
+    .promo-bar .promo-tag {
+      background: #fff;
+      color: #1a6fd4;
+      font-weight: 900;
+      font-size: .8rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-right: 10px;
+      white-space: nowrap;
+    }
+    .promo-bar a { color: #fff; text-decoration: underline; font-weight: 800; }
+    .promo-card {
+      background: #fff;
+      border: 2px solid rgba(42,125,225,.28);
+      border-radius: 24px;
+      padding: 22px 26px;
+      margin: 22px 0;
+      box-shadow: var(--shadow-soft);
+    }
+    .promo-card .promo-tag {
+      display: inline-block;
+      background: rgba(62,207,142,.15);
+      color: var(--accent-dark);
+      font-weight: 800;
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .promo-card h3 { margin: 0 0 8px; font-size: 1.2rem; }
+    .promo-card p { margin: 0; color: var(--muted); font-size: .97rem; }
+
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .mvv-grid .mini-card,
+    .values-grid .mini-card {
+      min-height: 0;
+      padding: 24px;
+      justify-content: flex-start;
+    }
+    .mvv-grid .mini-card span,
+    .values-grid .mini-card span { margin: 0; }
+    .purpose {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .price-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* ── TEAM SECTION ── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 8px;
+    }
+    .team-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      border-radius: 28px;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .team-photo {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center 10%;
+      display: block;
+    }
+    .team-photo-placeholder {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, var(--soft), rgba(62,207,142,.12));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .team-photo-placeholder svg {
+      width: 72px;
+      height: 72px;
+      opacity: .35;
+    }
+    .team-info {
+      padding: 22px 24px 26px;
+    }
+    .team-badge {
+      display: inline-block;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(42,125,225,.10);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .team-badge.accent {
+      color: var(--accent-dark);
+      background: rgba(62,207,142,.13);
+    }
+    .team-info h3 {
+      margin: 0 0 4px;
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+    .team-info .team-title {
+      color: var(--muted);
+      font-size: .95rem;
+      margin: 0 0 12px;
+    }
+    .team-info .team-reg {
+      font-size: .83rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+    .team-info .team-reg strong {
+      color: var(--text);
+    }
+    .team-soon {
+      opacity: .6;
+    }
+    .team-soon .team-photo-placeholder {
+      background: linear-gradient(135deg, #f0f4f8, #e8eef5);
+    }
+    .prox-label {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .mvv-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- PROMO ELEAM -->
+  <div class="promo-bar">
+    <span class="promo-tag">StimKine ELEAM</span>
+    Kinesiología individualizada para tus residentes · Plan de inicio de 3 meses · <a href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20informaci%C3%B3n%20del%20plan%20de%203%20meses%20para%20nuestro%20ELEAM." target="_blank" rel="noopener">Solicita tu propuesta</a>
+  </div>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <p>Kinesiología a domicilio · Santiago Sur · Adultos mayores · ELEAM · Postoperatoria · Cardiometabólica · <a href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20consultar%20por%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">+56 9 8933 1095</a></p>
+  </div>
+
+  <header class="header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="assets/logo_stimkine.jpg" alt="Logo StimKine Movimiento y Salud" class="brand-logo" style="width:72px;height:72px;object-fit:contain;" />
+        <div>
+          <strong>StimKine</strong>
+          <span>Movimiento y Salud</span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#adulto-mayor">Adultos mayores</a>
+        <a href="index.html#eleam">ELEAM</a>
+        <a href="index.html#equipo">Quién te atiende</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a class="btn btn-small btn-primary" href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">Agendar</a>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main>
+    <div class="container" style="padding-top:22px;"><a href="index.html" style="color:var(--primary-dark,#1a6fd4);font-weight:700;">← Volver al inicio</a></div>
+    <section class="section eleam-section" id="eleam">
+      <div class="container why-grid">
+        <div class="why-copy reveal">
+          <span class="eyebrow">StimKine ELEAM</span>
+          <h2>Kinesiología para Establecimientos de Larga Estadía para Adultos Mayores</h2>
+          <p>
+            Un servicio kinésico para residencias, con cobertura inicial en Santiago y la Región Metropolitana. Nuestro diferenciador: <strong>terapia individualizada por residente</strong>, con evaluación y plan de ejercicio propios, en lugar de rutinas grupales o protocolos genéricos.
+          </p>
+          <ul class="check-list">
+            <li>Evaluación inicial y plan de ejercicio propio para cada residente.</li>
+            <li>Equipo de kinesiólogos que atiende en simultáneo durante cada visita.</li>
+            <li>Planes mensuales según frecuencia: 1, 2 o 3 días por semana.</li>
+            <li>Plan de 3 meses para comenzar.</li>
+            <li>Ficha clínica y evolución de cada residente en EvalKine, con acceso para la familia y para el establecimiento.</li>
+            <li>Estadísticas del servicio para el ELEAM.</li>
+            <li>Registro documentado de la atención, útil para demostrar el trabajo realizado ante SENAMA y otras instituciones.</li>
+            <li>Kinesiólogos con Certificación StimKine de Calidad.</li>
+          </ul>
+          <div class="promo-card">
+            <span class="promo-tag">Plan de inicio · 3 meses</span>
+            <h3>Un servicio listo para implementar en tu residencia</h3>
+            <p>StimKine ELEAM es un servicio estructurado: evaluación inicial de cada residente, plan de ejercicio propio y un equipo de kinesiólogos con Certificación StimKine de Calidad. A través de la app EvalKine, la familia y el establecimiento acceden a la ficha clínica y pueden ver el avance y la evolución de su familiar o residente. Además, EvalKine entrega estadísticas del servicio para el ELEAM y deja un registro documentado de la atención, que el establecimiento puede usar para demostrar el trabajo realizado ante instituciones como SENAMA y otras entidades. Para comenzar, ofrecemos un plan de 3 meses con el que puedes ver los resultados en tu residencia.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20solicitar%20informaci%C3%B3n%20de%20StimKine%20ELEAM%20para%20nuestro%20establecimiento." target="_blank" rel="noopener">Solicitar propuesta para tu ELEAM</a>
+          </div>
+        </div>
+
+        <div class="why-cards reveal">
+          <article class="mini-card">
+            <strong>Individual</strong>
+            <span>Un plan por residente, según su evaluación</span>
+          </article>
+          <article class="mini-card">
+            <strong>Respaldado</strong>
+            <span>Registro de la atención para mostrar ante SENAMA y otras instituciones</span>
+          </article>
+          <article class="mini-card">
+            <strong>Coordinado</strong>
+            <span>Trabajo en conjunto con el equipo del establecimiento</span>
+          </article>
+          <article class="mini-card accent">
+            <strong>A tu medida</strong>
+            <span>Propuesta según tamaño y necesidades del ELEAM</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container center reveal">
+        <h2>Solicita una propuesta para tu ELEAM</h2>
+        <p>Escríbenos por WhatsApp. Sin ningún compromiso.</p>
+        <a class="btn btn-primary" href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20solicitar%20informaci%C3%B3n%20de%20StimKine%20ELEAM%20para%20nuestro%20establecimiento." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo_stimkine.jpg" alt="Logo StimKine Movimiento y Salud" class="footer-logo" />
+        <p>StimKine • Movimiento y Salud</p>
+      </div>
+      <div>
+        <p>Rehabilitación a domicilio con enfoque cercano, funcional y humano.</p>
+        <p style="margin-top:8px; font-size:.9rem; opacity:.75;">Reg. Superintendencia de Salud N° 942696</p>
+      </div>
+      <div>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#adulto-mayor">Adultos mayores</a>
+        <a href="index.html#eleam">ELEAM</a>
+        <a href="index.html#equipo">Quién te atiende</a>
+        <a href="index.html#evalkine">EvalKine</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20consultar%20por%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <span>Agenda</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
