@@ -30,6 +30,17 @@
     .eleam-section {
       background: linear-gradient(135deg, rgba(42,125,225,.07), rgba(62,207,142,.10));
     }
+    /* ── QUIÉN TE ATIENDE ── */
+    .doc-card { display:flex; gap:24px; align-items:center; background:#fff; border-radius:24px; padding:22px; box-shadow:var(--shadow-soft); max-width:760px; margin:0 auto 18px; }
+    .doc-photo { width:150px; height:150px; border-radius:50%; object-fit:cover; object-position:center 10%; flex-shrink:0; }
+    .doc-info h3 { margin:6px 0 2px; font-size:1.25rem; }
+    .doc-info .team-title { margin:0 0 8px; }
+    .doc-text { color:var(--muted); font-size:.95rem; margin:0 0 10px; }
+    .doc-cert { max-width:760px; margin:0 auto; background:rgba(62,207,142,.12); border-radius:20px; padding:18px 22px; }
+    .doc-cert strong { display:block; margin-bottom:6px; }
+    .doc-cert p { margin:0; color:var(--muted); font-size:.95rem; }
+    @media (max-width:600px){ .doc-card{ flex-direction:column; text-align:center; } .doc-photo{ width:130px; height:130px; } }
+
     /* ── PROMO ELEAM ── */
     .promo-bar {
       background: linear-gradient(90deg, #1a6fd4 0%, #0ea86e 100%);
@@ -251,9 +262,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#adulto-mayor">Adultos mayores</a>
         <a href="#eleam">ELEAM</a>
-        <a href="#porque">Por qué StimKine</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#evalkine">EvalKine</a>
+        <a href="#equipo">Quién te atiende</a>
         <a href="#contacto">Contacto</a>
         <a class="btn btn-small btn-primary" href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">Agendar</a>
       </nav>
@@ -287,65 +296,22 @@
       </div>
     </section>
 
-    <section class="section stats">
-      <div class="container stats-grid">
-        <article class="stat-card reveal">
-          <strong>Adultos mayores, en casa y en ELEAM</strong>
-          <p>Evaluación individual y plan de ejercicio propio para cada persona. Movilidad, equilibrio y prevención de caídas.</p>
-        </article>
-        <article class="stat-card reveal">
-          <strong>Equipamiento clínico incluido</strong>
-          <p>TENS, ultrasonido terapéutico, bandas, balón y más. Sin costo adicional por equipamiento.</p>
-        </article>
-        <article class="stat-card reveal">
-          <strong>Seguimiento e informes de progreso</strong>
-          <p>Registro de tu evolución en EvalKine, informes de progreso y acompañamiento por WhatsApp.</p>
-        </article>
-      </div>
-    </section>
-
     <section class="section" id="servicios">
       <div class="container">
         <div class="section-heading reveal">
           <span class="eyebrow">Servicios</span>
           <h2>Especialidades y servicios</h2>
-          <p>Atención orientada a cuatro áreas clínicas, con equipamiento portátil incluido, formación especializada y seguimiento de cada caso.</p>
+          <p>Atención a domicilio con equipamiento portátil incluido y seguimiento de cada caso.</p>
         </div>
-
-        <div class="services-grid">
-          <article class="service-card reveal">
-            <img src="assets/tens.jpg" alt="Rehabilitación cardiometabólica y post-infarto a domicilio en Santiago Sur" />
-            <div class="service-content">
-              <h3>Kinesiología cardiometabólica</h3>
-              <p>Ejercicio terapéutico orientado a personas con diabetes, obesidad, hipertensión, síndrome metabólico, sedentarismo o antecedentes cardiovasculares. Incluye atención post-infarto.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal">
-            <img src="assets/pelota_rodillas.jpg" alt="Kinesiología postoperatoria de rodilla, cadera y columna a domicilio" />
-            <div class="service-content">
-              <h3>Kinesiología postoperatoria</h3>
-              <p>Recuperación tras cirugía de rodilla, cadera o columna. Plan de ejercicio progresivo, control del dolor y seguimiento funcional en tu hogar.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal">
-            <img src="assets/banda_pierna.jpg" alt="Kinesiología geriátrica a domicilio: movilidad, equilibrio y prevención de caídas" />
-            <div class="service-content">
-              <h3>Kinesiología geriátrica</h3>
-              <p>Movilidad, equilibrio, fuerza y prevención de caídas en adultos mayores. Atención con experiencia en geriatría institucionalizada y comunitaria.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal">
-            <img src="assets/banda_brazo.jpg" alt="Rehabilitación musculoesquelética y deportiva a domicilio en Santiago" />
-            <div class="service-content">
-              <h3>Musculoesquelética y deportiva</h3>
-              <p>Lesiones de hombro, rodilla, tobillo, dolor lumbar y readaptación funcional para deportistas amateur. Tratamiento activo con equipamiento clínico incluido.</p>
-            </div>
-          </article>
+        <div class="why-cards reveal" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+          <article class="mini-card"><strong>Cardiometabólica</strong><span>Diabetes, obesidad, hipertensión y post-infarto</span></article>
+          <article class="mini-card"><strong>Postoperatoria</strong><span>Rodilla, cadera y columna</span></article>
+          <article class="mini-card"><strong>Geriátrica</strong><span>Movilidad, equilibrio y prevención de caídas</span></article>
+          <article class="mini-card"><strong>Musculoesquelética y deportiva</strong><span>Lesiones y readaptación funcional</span></article>
         </div>
-
+        <div class="center reveal" style="margin-top:26px;">
+          <a class="btn btn-primary" href="servicios.html">Ver servicios en detalle</a>
+        </div>
       </div>
     </section>
 
@@ -392,152 +358,22 @@
     </section>
 
     <section class="section eleam-section" id="eleam">
-      <div class="container why-grid">
-        <div class="why-copy reveal">
+      <div class="container">
+        <div class="section-heading reveal">
           <span class="eyebrow">StimKine ELEAM</span>
-          <h2>Kinesiología para Establecimientos de Larga Estadía para Adultos Mayores</h2>
-          <p>
-            Un servicio kinésico para residencias, con cobertura inicial en Santiago y la Región Metropolitana. Nuestro diferenciador: <strong>terapia individualizada por residente</strong>, con evaluación y plan de ejercicio propios, en lugar de rutinas grupales o protocolos genéricos.
-          </p>
-          <ul class="check-list">
-            <li>Evaluación inicial y plan de ejercicio propio para cada residente.</li>
-            <li>Equipo de kinesiólogos que atiende en simultáneo durante cada visita.</li>
-            <li>Planes mensuales según frecuencia: 1, 2 o 3 días por semana.</li>
-            <li>Plan de 3 meses para comenzar.</li>
-            <li>Ficha clínica y evolución de cada residente en EvalKine, con acceso para la familia y para el establecimiento.</li>
-            <li>Estadísticas del servicio para el ELEAM.</li>
-            <li>Registro documentado de la atención, útil para demostrar el trabajo realizado ante SENAMA y otras instituciones.</li>
-            <li>Kinesiólogos con Certificación StimKine de Calidad.</li>
-          </ul>
+          <h2>Kinesiología individualizada para tu residencia</h2>
+          <p>Un plan por residente, ficha clínica y evolución en EvalKine con acceso para la familia y el establecimiento, y un registro de la atención para mostrar ante SENAMA y otras instituciones.</p>
+        </div>
+        <div class="reveal" style="max-width:760px;margin:0 auto;">
           <div class="promo-card">
             <span class="promo-tag">Plan de inicio · 3 meses</span>
             <h3>Un servicio listo para implementar en tu residencia</h3>
             <p>StimKine ELEAM es un servicio estructurado: evaluación inicial de cada residente, plan de ejercicio propio y un equipo de kinesiólogos con Certificación StimKine de Calidad. A través de la app EvalKine, la familia y el establecimiento acceden a la ficha clínica y pueden ver el avance y la evolución de su familiar o residente. Además, EvalKine entrega estadísticas del servicio para el ELEAM y deja un registro documentado de la atención, que el establecimiento puede usar para demostrar el trabajo realizado ante instituciones como SENAMA y otras entidades. Para comenzar, ofrecemos un plan de 3 meses con el que puedes ver los resultados en tu residencia.</p>
           </div>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20solicitar%20informaci%C3%B3n%20de%20StimKine%20ELEAM%20para%20nuestro%20establecimiento." target="_blank" rel="noopener">Solicitar propuesta para tu ELEAM</a>
-          </div>
         </div>
-
-        <div class="why-cards reveal">
-          <article class="mini-card">
-            <strong>Individual</strong>
-            <span>Un plan por residente, según su evaluación</span>
-          </article>
-          <article class="mini-card">
-            <strong>Respaldado</strong>
-            <span>Registro de la atención para mostrar ante SENAMA y otras instituciones</span>
-          </article>
-          <article class="mini-card">
-            <strong>Coordinado</strong>
-            <span>Trabajo en conjunto con el equipo del establecimiento</span>
-          </article>
-          <article class="mini-card accent">
-            <strong>A tu medida</strong>
-            <span>Propuesta según tamaño y necesidades del ELEAM</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="problemas">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Qué tratamos</span>
-          <h2>Problemas frecuentes que abordamos</h2>
-          <p>Si estás pasando por una lesión, dolor o pérdida de movilidad, el tratamiento se adapta a tu condición clínica y a tus objetivos funcionales.</p>
-        </div>
-
-        <div class="why-grid">
-          <div class="why-copy reveal">
-            <ul class="check-list">
-              <li>Adultos mayores: movilidad, equilibrio, fuerza y prevención de caídas.</li>
-              <li>Postoperatorio de rodilla, cadera y columna.</li>
-              <li>Lesiones musculoesqueléticas: hombro, tobillo, lumbar.</li>
-              <li>Readaptación funcional en deportistas amateur.</li>
-              <li>Tendinitis y lesiones por sobrecarga.</li>
-              <li>Kinesiología cardiometabólica: diabetes, obesidad, hipertensión, síndrome metabólico y post-infarto.</li>
-            </ul>
-            <p>
-              También se evalúan otros cuadros musculoesqueléticos y funcionales según necesidad. El objetivo no es solo bajar el dolor, sino ayudarte a recuperar movimiento, seguridad y capacidad para tu vida diaria.
-            </p>
-          </div>
-
-          <div class="why-cards reveal">
-            <article class="mini-card">
-              <strong>Adultos mayores</strong>
-              <span>Movilidad, equilibrio y prevención de caídas</span>
-            </article>
-            <article class="mini-card">
-              <strong>Postoperatoria</strong>
-              <span>Rodilla, cadera y columna</span>
-            </article>
-            <article class="mini-card">
-              <strong>Cardiometabólica</strong>
-              <span>Diabetes, obesidad, HTA y riesgo cardiovascular</span>
-            </article>
-            <article class="mini-card accent">
-              <strong>Deportiva</strong>
-              <span>Lesiones y readaptación funcional</span>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Zonas de atención</span>
-          <h2>Kinesiología a domicilio en distintas comunas de Santiago</h2>
-          <p>StimKine realiza atención kinésica domiciliaria en diferentes sectores de Santiago, priorizando zonas donde ya existe experiencia de trabajo en terreno.</p>
-        </div>
-
-        <div class="why-grid">
-          <div class="why-copy reveal">
-            <p>
-              Atención frecuente en comunas de Santiago Sur: <strong>San Ramón, La Cisterna, El Bosque, San Miguel, Pedro Aguirre Cerda, Lo Espejo, San Joaquín y sectores cercanos</strong>. Desplazamiento en transporte público.
-            </p>
-            <p>
-              Si estás en otra comuna de Santiago, puedes consultar disponibilidad por WhatsApp.
-            </p>
-          </div>
-
-          <div class="why-cards reveal">
-            <article class="mini-card"><strong>Zona sur</strong><span>El Bosque y San Bernardo</span></article>
-            <article class="mini-card"><strong>Zona sur-oriente</strong><span>La Florida y San Ramón</span></article>
-            <article class="mini-card"><strong>Zona urbana</strong><span>San Miguel y Ñuñoa</span></article>
-            <article class="mini-card accent"><strong>Consulta directa</strong><span>Disponibilidad según sector</span></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Cómo es una sesión</span>
-          <h2>Evaluación, tratamiento y seguimiento</h2>
-          <p>La atención se adapta a tu estado actual, tu dolor, tu movilidad y tus metas. Cada sesión busca que entiendas tu proceso y avances con claridad.</p>
-        </div>
-
-        <div class="why-cards reveal" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-          <article class="mini-card">
-            <strong>1. Evaluación</strong>
-            <span>Dolor, función, movilidad y contexto del paciente.</span>
-          </article>
-          <article class="mini-card">
-            <strong>2. Tratamiento</strong>
-            <span>Ejercicio terapéutico, apoyo físico y equipamiento según necesidad.</span>
-          </article>
-          <article class="mini-card">
-            <strong>3. Educación</strong>
-            <span>Explicación simple para que entiendas qué pasa y qué hacer.</span>
-          </article>
-          <article class="mini-card accent">
-            <strong>4. Seguimiento</strong>
-            <span>Control de avances y apoyo por WhatsApp entre sesiones.</span>
-          </article>
+        <div class="center reveal" style="margin-top:8px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a class="btn btn-primary" href="eleam.html">Ver el servicio ELEAM</a>
+          <a class="btn btn-secondary" href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20solicitar%20informaci%C3%B3n%20de%20StimKine%20ELEAM%20para%20nuestro%20establecimiento." target="_blank" rel="noopener">Solicitar propuesta</a>
         </div>
       </div>
     </section>
@@ -555,157 +391,40 @@
             <li>TENS y ultrasonido terapéutico incluidos sin costo adicional.</li>
             <li>Seguimiento de evolución con EvalKine e informes de progreso.</li>
           </ul>
-          <p class="price-note">
-            Cada sesión incluye evaluación, equipamiento clínico (TENS, ultrasonido, bandas, balón), registro de tu evolución en EvalKine e informes de progreso. El valor refleja una atención completa y medible, no solo una hora de ejercicio.
-          </p>
+          <p class="price-note">Cada sesión incluye evaluación, equipamiento clínico (TENS, ultrasonido, bandas, balón), registro de tu evolución en EvalKine e informes de progreso. Cotiza por WhatsApp, sin compromiso.</p>
         </div>
 
         <div class="why-cards reveal">
-          <article class="mini-card">
-            <strong>$35.000</strong>
-            <span>Sesión individual</span>
-          </article>
-          <article class="mini-card">
-            <strong>$27.000</strong>
-            <span>Pack 5 sesiones / c/u</span>
-          </article>
-          <article class="mini-card">
-            <strong>$25.000</strong>
-            <span>Pack 10 sesiones o más / c/u</span>
-          </article>
           <article class="mini-card accent">
-            <strong>A tu medida</strong>
-            <span>Sesión adaptada a tu caso clínico</span>
+            <strong>Cotiza por WhatsApp</strong>
+            <span>Sin ningún compromiso. Te contamos valores y planes según tu caso. <a href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20cotizar%20una%20atenci%C3%B3n." target="_blank" rel="noopener"><b>Escribir ahora</b></a></span>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section gallery-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Trabajo real</span>
-          <h2>Rehabilitación con herramientas concretas</h2>
-          <p>Estas imágenes muestran parte del enfoque de trabajo de StimKine: cercano, funcional y aplicado a la vida diaria.</p>
-        </div>
-
-        <div class="gallery-grid">
-          <img class="reveal" src="assets/fortalecimiento_brazo.jpg" alt="Fortalecimiento de brazo con mancuerna en sesión domiciliaria de kinesiología" />
-          <img class="reveal" src="assets/banda_brazo.jpg" alt="Ejercicio con banda elástica para rehabilitación de brazo en domicilio" />
-          <img class="reveal" src="assets/piernas_pelota.jpg" alt="Trabajo terapéutico de miembros inferiores con balón en rehabilitación domiciliaria" />
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="nosotros">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Quiénes somos</span>
-          <h2>Propósito, misión, visión y valores</h2>
-          <p class="purpose">Ayudar a las personas a moverse mejor para vivir mejor.</p>
-        </div>
-
-        <div class="mvv-grid reveal">
-          <article class="mini-card">
-            <strong>Misión</strong>
-            <span>Llevar kinesiología de calidad clínica al hogar de las personas y a residencias de adultos mayores, con evaluación individual, ejercicio terapéutico y seguimiento medible de cada caso.</span>
-          </article>
-          <article class="mini-card accent">
-            <strong>Visión</strong>
-            <span>Ser un referente en Santiago en rehabilitación domiciliaria e institucional para adultos mayores, uniendo la atención clínica cercana con herramientas tecnológicas propias.</span>
-          </article>
-        </div>
-
-        <div class="values-grid reveal">
-          <article class="mini-card"><strong>Humanización</strong><span>Vemos a la persona completa, no solo su diagnóstico.</span></article>
-          <article class="mini-card"><strong>Profesionalismo</strong><span>Título universitario, registro vigente y trabajo ordenado.</span></article>
-          <article class="mini-card"><strong>Evidencia científica</strong><span>Decisiones clínicas basadas en la mejor evidencia disponible.</span></article>
-          <article class="mini-card"><strong>Personalización</strong><span>Cada plan se diseña para la persona, no para el promedio.</span></article>
-          <article class="mini-card"><strong>Autonomía</strong><span>Buscamos que cada persona recupere y mantenga su independencia.</span></article>
-          <article class="mini-card"><strong>Accesibilidad</strong><span>Llevamos la rehabilitación al hogar y a las instituciones.</span></article>
-          <article class="mini-card"><strong>Innovación</strong><span>Herramientas propias, como EvalKine, para medir la evolución.</span></article>
-          <article class="mini-card"><strong>Compromiso</strong><span>Seguimiento cercano y constancia durante todo el proceso.</span></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- EQUIPO PROFESIONAL -->
+<!-- EQUIPO PROFESIONAL -->
     <section class="section section-soft" id="equipo">
       <div class="container">
         <div class="section-heading reveal">
-          <span class="eyebrow">Equipo profesional</span>
-          <h2>Profesionales comprometidos con tu recuperación</h2>
-          <p>Equipo clínico con título universitario y registro vigente en la Superintendencia de Salud, apoyado por coordinación y administración de servicios.</p>
+          <span class="eyebrow">Quién te atiende</span>
+          <h2>Atención a cargo de kinesiólogos certificados</h2>
         </div>
 
-        <div class="team-grid">
-          <!-- GUILLERMO -->
-          <article class="team-card reveal">
-            <img
-              src="assets/foto_guillermo.jpg"
-              alt="Guillermo Díaz Viveros - Kinesiólogo StimKine"
-              class="team-photo"
-              style="object-fit:cover; object-position: center 10%; height:420px;"
-            />
-            <div class="team-info">
-              <span class="team-badge">Director Clínico · Fundador</span>
-              <h3>Guillermo Díaz Viveros</h3>
-              <p class="team-title">Kinesiólogo</p>
-              <p style="color:var(--muted); font-size:.93rem; margin:0 0 10px;">Su enfoque: que cada persona se mueva con seguridad y conserve su independencia, con ejercicio terapéutico y un plan a su medida.</p>
-              <div class="team-reg">
-                <strong>Reg. Superintendencia de Salud:</strong> N° 942696
-              </div>
-            </div>
-          </article>
-
-          <!-- COORDINADORA CLÍNICA -->
-          <article class="team-card reveal">
-            <div class="team-photo-placeholder">
-              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="40" cy="30" r="18" stroke="#2A7DE1" stroke-width="3"/>
-                <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30" stroke="#2A7DE1" stroke-width="3" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="team-info">
-              <span class="team-badge accent">Kinesiología · Coordinación clínica</span>
-              <h3>Coordinadora Clínica</h3>
-              <p class="team-title">Kinesióloga</p>
-              <p style="color:var(--muted); font-size:.93rem; margin:0;">Apoya la coordinación clínica de los casos y la continuidad de la atención entre sesiones.</p>
-            </div>
-          </article>
-
-          <!-- ADMINISTRADORA DE SERVICIOS -->
-          <article class="team-card reveal">
-            <div class="team-photo-placeholder">
-              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="40" cy="30" r="18" stroke="#3ECF8E" stroke-width="3"/>
-                <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30" stroke="#3ECF8E" stroke-width="3" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="team-info">
-              <span class="team-badge accent">Administración · Servicios</span>
-              <h3>Administradora de Servicios</h3>
-              <p class="team-title">Gestión y atención a pacientes y familias</p>
-              <p style="color:var(--muted); font-size:.93rem; margin:0;">Gestiona la agenda, la comunicación con pacientes y familias y la administración de los servicios de StimKine.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="calidad">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Certificación StimKine de Calidad</span>
-          <h2>Profesionales verificados y actualizados</h2>
-          <p>Todos los kinesiólogos que trabajan con StimKine pasan por una verificación profesional y realizan un curso de calidad de la atención, que se mantiene actualizado.</p>
+        <div class="doc-card reveal">
+          <img src="assets/foto_guillermo.jpg" alt="Guillermo Díaz Viveros - Kinesiólogo StimKine" class="doc-photo" />
+          <div class="doc-info">
+            <span class="team-badge">Director Clínico · Fundador</span>
+            <h3>Guillermo Díaz Viveros</h3>
+            <p class="team-title">Kinesiólogo</p>
+            <p class="doc-text">Su enfoque: que cada persona se mueva con seguridad y conserve su independencia, con ejercicio terapéutico y un plan a su medida.</p>
+            <div class="team-reg"><strong>Reg. Superintendencia de Salud:</strong> N° 942696</div>
+          </div>
         </div>
 
-        <div class="values-grid reveal">
-          <article class="mini-card"><strong>Profesionales verificados</strong><span>Revisamos título y registro vigente en la Superintendencia de Salud de cada kinesiólogo.</span></article>
-          <article class="mini-card"><strong>Curso de calidad</strong><span>Cada kinesiólogo realiza un curso sobre la calidad de la atención a nuestros usuarios.</span></article>
-          <article class="mini-card"><strong>Modelo de atención StimKine</strong><span>El curso incluye nuestro modelo de atención: evaluación individual, plan propio y seguimiento.</span></article>
-          <article class="mini-card accent"><strong>Siempre actualizado</strong><span>El curso se actualiza de forma continua para mantener el estándar de atención.</span></article>
+        <div class="doc-cert reveal">
+          <strong>Certificación StimKine de Calidad</strong>
+          <p>Los kinesiólogos que trabajan con StimKine tienen título y registro verificados, y realizan un curso de calidad de la atención y de nuestro modelo de atención, que se mantiene actualizado.</p>
         </div>
       </div>
     </section>
@@ -803,6 +522,7 @@
             <p><strong>WhatsApp:</strong> <a href="https://wa.me/56989331095?text=Hola%20StimKine,%20quisiera%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">+56 9 8933 1095</a></p>
             <p><strong>Correo:</strong> <a href="mailto:stimkine@gmail.com">stimkine@gmail.com</a></p>
             <p><strong>Servicio:</strong> Atención domiciliaria y rehabilitación personalizada</p>
+            <p><strong>Zona de atención:</strong> Santiago Sur: San Ramón, La Cisterna, El Bosque, San Miguel, Pedro Aguirre Cerda, Lo Espejo, San Joaquín, San Bernardo, La Granja, La Florida, Ñuñoa y Providencia. Consulta disponibilidad en otras comunas.</p>
 
             <p><strong>Equipamiento:</strong> Bandas, mancuernas, balón, pedalera, TENS, ultrasonido y termoterapia</p>
           </div>
@@ -822,46 +542,7 @@
       </div>
     </section>
 
-    <section class="section seo-local">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Kinesiología a domicilio en Santiago</span>
-          <h2>Atención kinésica funcional en tu hogar</h2>
-        </div>
-
-        <div class="why-grid">
-          <div class="why-copy reveal">
-            <p>
-              En <strong>StimKine Movimiento y Salud</strong> ofrecemos <strong>kinesiología a domicilio en Santiago Sur</strong>, con foco en <strong>adultos mayores</strong> (movilidad, equilibrio y prevención de caídas), además de <strong>rehabilitación postoperatoria, musculoesquelética y deportiva, y rehabilitación cardiometabólica y post-infarto</strong>. También prestamos <strong>servicio kinésico para ELEAM</strong> en Santiago y la Región Metropolitana.
-            </p>
-            <p>
-              Guillermo Díaz Viveros, kinesiólogo, lleva atención especializada directamente al hogar del paciente, con equipamiento clínico portátil incluido y seguimiento digital de evolución.
-            </p>
-            <p>
-              Si buscas un <strong>kinesiólogo a domicilio en Santiago Sur</strong>, puedes agendar tu evaluación por WhatsApp y comenzar un tratamiento profesional, personalizado y con respaldo clínico real.
-            </p>
-          </div>
-
-          <div class="why-copy reveal">
-            <p>
-              Cobertura en comunas de Santiago Sur: <strong>San Ramón, La Cisterna, El Bosque, San Miguel, Pedro Aguirre Cerda, Lo Espejo, San Joaquín, San Bernardo, La Granja, La Florida, Ñuñoa y Providencia</strong>. Consulta disponibilidad en otros sectores.
-            </p>
-            <p>
-              El objetivo de StimKine es llevar una rehabilitación de calidad clínica real al domicilio, con seguimiento cercano, objetivos concretos y equipamiento incluido.
-            </p>
-            <ul class="check-list">
-              <li>Adultos mayores: movilidad, equilibrio y prevención de caídas.</li>
-              <li>Servicio kinésico para ELEAM con terapia individualizada por residente.</li>
-              <li>Postoperatoria de rodilla, cadera y columna.</li>
-              <li>Deportistas amateur: lesiones y readaptación funcional.</li>
-              <li>Kinesiología cardiometabólica: diabetes, obesidad, HTA, síndrome metabólico y post-infarto.</li>
-              <li>TENS y ultrasonido terapéutico incluidos sin costo adicional.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+</main>
 
   <footer class="footer">
     <div class="container footer-grid">
@@ -878,8 +559,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#adulto-mayor">Adultos mayores</a>
         <a href="#eleam">ELEAM</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#calidad">Calidad</a>
+        <a href="#equipo">Quién te atiende</a>
         <a href="#evalkine">EvalKine</a>
         <a href="#contacto">Contacto</a>
       </div>
